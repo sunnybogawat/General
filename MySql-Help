@@ -1,0 +1,72 @@
+How to backup MySQL database? - using mysqldump -
+---------------------------------------------------------------------------
+
+   mysqldump -u [user] -p [database_name] > [backupfile].dump 
+
+This command is going to ask you for the [user] password and then will create a script which later can be used to retore the data.
+
+Another way is to use the optimized way.
+
+  mysqldump --opt -u [user_name] -p [database_name] > [backup_file].dump
+
+This command will use an optimized method, and will include in the script MySQL commands that will erase (drop) tables that already 
+exists and create them again before populate the data inside.
+
+Maybe the best way to run this command is to use the option of gzip the output file. (for obvious reasons)
+
+   mysqldump --opt -u [user_name] -p [database_name] | gzip > [backup_file].dump.gz
+
+Once you have your backup file, you may want to restore it someday, this is the way to do it. (remember tu unzip your file, if zipped, before)
+
+  mysql [database_name] < [backup_file].dump
+---------------------------------------------------------------------------------
+Recover MySQL root Password
+---------------------------------------------------------------------------------
+You can recover MySQL database server password with following five easy steps.
+
+Step # 1 : Stop mysql service
+
+# /etc/init.d/mysql stop
+Output:
+
+Stopping MySQL database server: mysqld.
+
+Step # 2: Start to MySQL server w/o password:
+
+# mysqld_safe --skip-grant-tables &
+Output:
+
+[1] 5988
+Starting mysqld daemon with databases from /var/lib/mysql
+mysqld_safe[6025]: started
+
+Step # 3: Connect to mysql server using mysql client:
+
+# mysql -u root
+Output:
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1 to server version: 4.1.15-Debian_1-log
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+mysql>
+
+Step # 4: Setup new MySQL root user password
+
+mysql> use mysql;
+mysql> update user set password=PASSWORD("NEW-ROOT-PASSWORD") where User='root';
+mysql> flush privileges;
+mysql> quit
+Step # 5: Stop MySQL Server:
+
+# /etc/init.d/mysql stop
+Output:
+
+Stopping MySQL database server: mysqld
+STOPPING server from pid file /var/run/mysqld/mysqld.pid
+mysqld_safe[6186]: ended
+[1]+  Done                    mysqld_safe --skip-grant-tables
+
+Step # 6: Start MySQL server and test it
+
+# /etc/init.d/mysql start
+# mysql -u root -p
