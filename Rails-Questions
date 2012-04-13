@@ -1,0 +1,211 @@
+1. What is rubygems? 
+2. What is a Symbol? 
+3. What is the difference between a Symbol and String? 
+4. What is the purpose of yield? 
+5. How do you define class variables? 
+6. How do you define instance variables? 
+7. How do you define global variables? 
+8. How can you dynamically define a method body? 
+9. What is a Range? 
+10. How can you implement method overloading? 
+11. What is the difference between '&&' and 'and' operators? 
+12. What is the convention for using '!' at the end of a method name? 
+13. What is a module? 
+14. What is mixin? 
+15. How will you implement a singleton pattern? 
+16. How will you implement a observer pattern? 
+17. How can you define a constant? 
+18. How can you define a custom Exception? 
+19. How can you fire a method when a module is included inside a class? 
+20. What is the default access modifier (public/protected/private) for a method? 
+21. How can you call the base class method from inside of its overriden method? 
+
+Rails Specific Questions
+A thorough reading of the articles at Ruby on Rails Guides can be very useful for starters as well as a refresher for veterans. The following bunch of questions are specific to rails, in no particular order. The Pragmatic Bookshelf has a fantastic book for beginners called Agile Web Development Using Ruby on Rails.
+1. Define the Rails MVC implementation using an example. 
+2. What is a named scope? (or Scope in Rails 3). 
+3. Can you give an example of a class that should be inside the lib folder? 
+4. Where should you put code that is supposed to run when your application launches? 
+5. What deployment tool do you use? 
+6. How can you migrate your database schema one level down? 
+7. What is an observer? 
+8. What is a sweeper? 
+9. How can you implement caching in Rails? 
+10. What is a filter? When it is called? 
+11. How can you divide your controllers into separate modules? 
+12. What is RESTful routing? 
+13. How can you list all routes for an application? 
+14. How can you send a multi-part email? 
+15. Is it possible to embed partial views inside layouts? How? 
+16. What is the purpose of RJS? 
+17. How can you create a REST API for your application? 
+18. How can you define a new environment called 'staging'? 
+19. What is Rake? 
+20. What is Capistrano? 
+21. What is a polymorophic association? 
+22. How can you implement a polymorphic association? 
+23. What is a has and belongs to many association? 
+24. What is the difference between has_one and belongs_to? 
+25. How can you implement single table inheritance? 
+26. What is eager loading? 
+27. How can you eager load associated objects? 
+28. How can you add a custom validation on your model? 
+29. How can you implement a custom theme for your forms? 
+30. Why is fields_for used for? 
+31. What is the purpose of a helper method? 
+32. What is flash? 
+33. How can you install the missing gems that are required by your application in the simplest way? 
+34. How can you implement internationalization? 
+35. How can you show search user friendly urls instead of using only numeric ids? 
+36. How can you configure your application for different environments? 
+37. How can you instruct rails logger to ignore passwords and such fields while logging? 
+What is the difference between pre-initializers and initializers
+Test Frameworks
+Ruby on Rails has a number of built-in and a few other third-party test frameworks. Here are a few sample questions on such frameworks:
+1. Are you familiar with unit testing? 
+2. How does functional testing differ from unit testing? 
+3. Have you ever used a mocking framework? 
+4. Are you familiar with BDD using RSpec or Cucumber? 
+5. What is an alternative to using test fixtures? 
+6. How can you reuse part of a text fixture? 
+7. How do you specify associations in the test fixture yml files? 
+
+Plugins
+Plugins are the principal mechanism to reuse code. The open-source community is at full-bloom when it comes about plugins. The Rails Plugins site has a really good list of such plugins from the community.
+1. What plugin would you recommend for user authentication and authorization? 
+2. What plugin do you use for full-text search? 
+3. How can you implement a state machine? 
+4. What is the difference between a plugin and a gem? 
+5. How can you create a plugin? 
+6. Can you please name a few useful plugins? 
+7. How can you implement a search feature that searches for multiple models? 
+8. How can you upload a flie to a server? 
+
+Architecture Related Questions
+This questions can be from different angles like: quality, security, scalability, manageability, interoperability, reusability and all the other ilities you name! Here are a few example questions:
+1. Is Rails scalable? 
+2. What are the key deployment challenges? 
+3. How can you safeguard a rails application from SQL injection attack? 
+4. How can you secure a rails application? 
+5. How can rails engage with a SOA platform? 
+
+Community Related Questions
+I see a fairly large community on Github, Stack Overflow, RailsCasts, The Riding Rails Blog and many more. Some interviewers may want to see if you are connected to the community. The following questions may help you prepare :-)
+1. Can you tell me a few good community resources for Rails? 
+2. Where would you reach out to get the community to answer your questions? 
+3. What's new in Rails 3.0? 
+4. Which famous applications are built using ruby on rails? 
+What is Rack? 
+1. Sketch out a deployment architecture of a Ruby on Rails application utilizing multiple servers. 
+2. How can you secure a rails application to counter for Session Fixation? 
+3. Where can I get the core rails framework source code? 
+4. How can you reuse the models from one rails project into another? 
+5. Explain one plugin that you extracted out of your source code. 
+6. What is the difference between pre-initializers and initializers? 
+7. How can you easily switch your logger to use Log4r? 
+8. How would you design the logging standard for your rails application? 
+9. How can you implement asynchronous messaging in Rails? 
+10. What will you do to look for a possible memory leak in Rails application? 
+11. How can you run a profiler? 
+12. What is lambda? 
+13. What is Proc? When did you use this? 
+14. How can you use before and after callbacks of your rails methods to halt a database insert/update/delete? 
+15. How can you reuse your before and after callback methods across multiple models? 
+16. Define an architecture to store files uploaded to an application so that they are only accessible to valid users. 
+17. How would you change your asset storage to use a static server? 
+18. Explain one situation when you used rails caching. 
+19. What kinds of caching comes in-built with Rails? 
+20. Can you explain the use of 'dynamic' features of Ruby on the core Rails framework? 
+21. How can you call a SOAP web service from a rails application? 
+22. Your application needs to send a lot of email notifications. How would you design the notification so that the end user doesn't get stuck for email sending delays? 
+23. What is a mongrel cluster? 
+24. Can you explain if the clusters share a same memory? Can one cluster handle a request from a client that was handled by another? 
+25. How would you internationalize your application interface? 
+26. How can you create a rails generator? 
+27. Have you ever used a polymorphic association? 
+28. How can you define a plugin that adds a new class method to ActiveRecord::Base? 
+29. What are the three most significant changes in Rails 3 in your eyes? 
+30. How can you implement complex reporting using ruby on rails? 
+
+block and proc - 
+
+method dispatcher  --- ok
+include 2 modules which method gets called ----- ok
+how to perform some action while including modules in a class ---- answered
+
+load & require --- ok
+meta class ---- nope
+ruby object is the highest classes.. every thing in ruby object --- ok
+string---- diff ways of representing strings  ---ok
+
+garbage collection ---- ok
+algorithm for garbage collection --  didnt know
+
+private methods --- how to define -- ok
+ pecularity of private method in Ruby ---ok
+how to call private method in derived class --- ok
+
+implicit and explict recievers ---- nope
+ where are the symbols and variables storde --- ok  y ? not knowing
+
+how to define a singleton class in ruby ----- no
+
+Rails 
+---------------------------
+
+patterns in rails  --- mvc, factory, singleton
+what new in rails 3? ----- no known about active relation
+life cycle of requet - ok
+why mvc - average
+design pattern - avg
+sessions - ok
+actve record relationships - ok
+rails - contribution - no 
+rails community - ok
+difference between git ans svn - no
+git push & commit - no
+contineouse integration tools -no
+javascript -ok
+
+
+project management exp - module lead (4 person team)
+process- scrum,redmine ,time tracker
+code reviews - NA
+
+Advance
+
+rails security - csrf,weak
+
+
+1. What is Rack?
+   2. Sketch out a deployment architecture of a Ruby on Rails application utilizing multiple servers.
+   3. How can you secure a rails application to counter for Session Fixation?
+   4. Where can I get the core rails framework source code?
+   5. How can you reuse the models from one rails project into another?
+   6. Explain one plugin that you extracted out of your source code.
+   7. What is the difference between pre-initializers and initializers?
+   8. How can you easily switch your logger to use Log4r?
+   9. How would you design the logging standard for your rails application?
+  10. How can you implement asynchronous messaging in Rails?
+  11. What will you do to look for a possible memory leak in Rails application?
+  12. How can you run a profiler?
+  13. What is lambda?
+  14. What is Proc? When did you use this?
+  15. How can you use before and after callbacks of your rails methods to halt a database insert/update/delete?
+  16. How can you reuse your before and after callback methods across multiple models?
+  17. Define an architecture to store files uploaded to an application so that they are only accessible to valid users.
+  18. How would you change your asset storage to use a static server?
+  19. Explain one situation when you used rails caching.
+  20. What kinds of caching comes in-built with Rails?
+  21. Can you explain the use of 'dynamic' features of Ruby on the core Rails framework?
+  22. How can you call a SOAP web service from a rails application?
+  23. Your application needs to send a lot of email notifications. How would you design the notification so that the end user doesn't get stuck for email sending delays?
+  24. What is a mongrel cluster?
+  25. Can you explain if the clusters share a same memory? Can one cluster handle a request from a client that was handled by another?
+  26. How would you internationalize your application interface?
+  27. How can you create a rails generator?
+  28. Have you ever used a polymorphic association?
+  29. How can you define a plugin that adds a new class method to ActiveRecord::Base?
+  30. What are the three most significant changes in Rails 3 in your eyes?
+  31. How can you implement complex reporting using ruby on rails?
+
